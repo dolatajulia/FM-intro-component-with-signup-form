@@ -1,0 +1,158 @@
+:root {
+    --bg-col: hsl(0, 100%, 74%);
+    --bg-col-form: white;
+    --accent-col-green:  hsl(154, 59%, 51%);
+    --accent-col-green-focus: hsla(154, 59%, 51%, 0.493);
+    --accent-col-purple: hsl(248, 32%, 49%);
+
+    --fc-main: white;
+    --fc-dark: hsl(249, 10%, 26%);
+    --fc-light: hsl(246, 25%, 77%);
+    --fc-anchor: hsl(0, 100%, 74%);
+
+    --fs-heading: 2.5rem;
+    --fs-regular: 0.85rem;
+    --fs-small: 0.7rem;
+    --fs-x-small: 0.55rem;
+
+    --fw-xs: 400;
+    --fw-s: 500;
+    --fw-m: 600;
+    --fw-l: 700;
+
+    --ff: 'Poppins', sans-serif;
+}
+
+/*delete
+.text-section, .form-section {
+    border: green solid 1px;
+}
+delete*/
+
+*, *:before, *:after {
+    font: inherit;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-col);
+    background-image: url(../images/bg-intro-desktop.png);
+    font-family: var(--ff);
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.text-section {
+    color: var(--fc-main);
+    width: 50%;
+    max-width: 30rem;
+    margin-right: 2.5rem;
+}
+
+.form-section {
+    text-align: center;
+    width: 50%;
+    max-width: 30rem;
+}
+
+h1 {
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-l);
+    line-height: 2.6rem;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-size: var(--fs-small);
+    color: var(--fc-main);
+    font-weight: var(--fw-xs);
+    background-color: var(--accent-col-purple);
+    border-radius: 8px;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px hsla(249, 10%, 26%, 0.233);
+}
+
+h2 span {
+    font-weight: var(--fw-m);
+}
+
+.text-section p{
+    font-size: var(--fs-regular);
+}
+
+form {
+    background-color: var(--bg-col-form);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 5px hsla(249, 10%, 26%, 0.233);
+}
+
+input {
+    width: 100%;
+    border-radius: 3px;
+    margin: 0.4rem;
+    box-shadow: none;
+    padding: 0.7rem;
+    border: solid 1px var(--fc-light);
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-m);
+}
+
+input:focus {
+    border: solid 2px var(--fc-dark);
+    appearance: none;
+    -webkit-appearance: none;
+    outline:none !important;
+}
+
+input:valid {
+    border: solid 1px var(--accent-col-green);
+}
+
+.try[data-error] input {
+    border: 1px solid var(--bg-col);
+    color: var(--bg-col);
+}
+
+.try[data-error]::after {
+    content: attr(data-error);
+    color: var(--bg-col);
+    font-size: var(--fs-x-small);
+    float: right;
+}
+
+#btn {
+    border: none;
+    background-color: var(--accent-col-green);
+    color: var(--fc-main);
+    font-size: var(--fs-small);
+    cursor: pointer;
+}
+
+#btn:focus {
+    background-color: var(--accent-col-green-focus);
+}
+
+form p {
+    font-size: var(--fs-x-small);
+    color: var(--fc-light);
+}
+
+form p a {
+    text-decoration: none;
+    color: var(--fc-anchor);
+    font-weight: var(--fw-m);
+}
