@@ -34,6 +34,11 @@ body {
     background-color: var(--bg-col);
     background-image: url(../images/bg-intro-desktop.png);
     font-family: var(--ff);
+    display: flex;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
 }
 
 .content {
@@ -42,6 +47,7 @@ body {
     width: 80%;
     margin: 0 auto;
     align-items: center;
+    justify-content: center;
 }
 
 .text-section {
@@ -92,12 +98,13 @@ form {
     margin: 0 auto;
     width: 100%;
     box-shadow: 0 5px hsla(249, 10%, 26%, 0.233);
+    
 }
 
 input {
     width: 100%;
     border-radius: 3px;
-    margin: 0.4rem;
+    margin: 0.4rem 0;
     box-shadow: none;
     padding: 0.7rem;
     font-size: var(--fs-regular);
@@ -136,6 +143,7 @@ form p a {
 
 .input-container {
     position: relative;
+    
 }
 
 #error-icon-email, 
@@ -166,3 +174,29 @@ form p a {
     border: solid 1px var(--fc-light);
 }
 
+@media only screen and (max-width: 500px) {
+    
+    body {
+        width: 80%;
+    }
+
+    .content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .text-section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+
+    .form-section {
+        width: 100%;
+    }
+
+    form {
+        padding: 1rem;
+    }
+}

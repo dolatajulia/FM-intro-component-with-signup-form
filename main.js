@@ -78,3 +78,34 @@ form.addEventListener('submit', (e) => {
     }
 })
 
+form.addEventListener('keyup', (e) => {
+
+    if(name.value != '' && name.value != null){
+        document.getElementById('error-icon-name').style.display = 'none';
+        document.getElementById('error-message-name').style.display = 'none';
+        document.getElementById('name').style.border = 'solid 1px var(--fc-light)';
+        document.getElementById('name').style.color = 'var(--fc-dark)';
+    }
+
+    if(lastName.value != '' && lastName.value != null){
+        document.getElementById('error-icon-last-name').style.display = 'none';
+        document.getElementById('error-message-last-name').style.display = 'none';
+        document.getElementById('last-name').style.border = 'solid 1px var(--fc-light)';
+        document.getElementById('last-name').style.color = 'var(--fc-dark)';
+    }
+
+    if(email.value != '' && email.value != null && email.value.match(emailPattern)){
+        document.getElementById('error-icon-email').style.display = 'none';
+        document.getElementById('error-message-email').style.display = 'none';
+        document.getElementById('email').style.border = 'solid 1px var(--fc-light)';
+        document.getElementById('email').style.color = 'var(--fc-dark)';
+    }
+
+    if(password.value != '' && password.value != null){
+        document.getElementById('error-icon-password').style.display = 'none';
+        document.getElementById('error-message-password').style.display = 'none';
+        document.getElementById('password').style.border = 'solid 1px var(--fc-light)';
+        document.getElementById('password').style.color = 'var(--fc-dark)';
+    }
+
+})
