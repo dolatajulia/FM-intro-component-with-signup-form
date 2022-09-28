@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Intro component with signup form</title>
+    <script defer src="main.js"></script>
 </head>
 <body>
     <main class="content">
@@ -18,17 +19,39 @@
         </div>
         <div class="form-section">
             <h2><span>Try it free 7 days</span> then $20/mo. thereafter</h2>
-            <form>
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="text" name="last-name" placeholder="Last Name" required>
-                <div class="try" data-error="Sorry, this email is invalid">
-                    <input type="text" name="email" placeholder="Email Address" required required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Invalid email address">
-                    <img class='error-icon' src="resources\images\icon-error.svg">
+            <form id="form">
+
+                <div  class="input-container">
+                    <input id='name' type="text" name="name" placeholder="Name">
+                    <img id='error-icon-name' src="resources\images\icon-error.svg">
+                    <span id="error-message-name">First Name cannot be empty</span>
                 </div>
-                <input type="password" name="password" placeholder="Password" required>
+                
+                <div class="input-container">
+                    <input id='last-name' type="text" name="last-name" placeholder="Last Name">
+                    <img id='error-icon-last-name' src="resources\images\icon-error.svg">
+                    <span id="error-message-last-name">Last Name cannot be empty</span>
+                </div>
+                
+                <div class="input-container">
+                    <input id='email' type="text" name="email" placeholder="Email Address">
+                    <img id='error-icon-email' src="resources\images\icon-error.svg">
+                    <span id="error-message-email">Looks like this is not an email</span>
+                </div>
+
+                <div class="input-container">
+                    <input id='password' type="password" name="password" placeholder="Password" >
+                    <img id='error-icon-password' src="resources\images\icon-error.svg">
+                    <span id="error-message-password">Password cannot be empty</span>
+                </div>
+                
                 <input type="submit" id='btn' value="CLAIM YOUR FREE TRIAL" >
                 <p>By clicking the button you are agreein to our <a href="#">Terms and Services</a></p>
             </form>
+            
+                
+            
+            
         </div>
     </main>
 </body>

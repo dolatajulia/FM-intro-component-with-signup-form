@@ -106,7 +106,6 @@ input {
     margin: 0.4rem;
     box-shadow: none;
     padding: 0.7rem;
-    border: solid 1px var(--fc-light);
     font-size: var(--fs-regular);
     font-weight: var(--fw-m);
 }
@@ -118,21 +117,23 @@ input:focus {
     outline:none !important;
 }
 
+/*
 input:valid {
     border: solid 1px var(--accent-col-green);
 }
 
-.try[data-error] input {
+.input-container[data-error] input {
     border: 1px solid var(--bg-col);
     color: var(--bg-col);
 }
 
-.try[data-error]::after {
+.input-container[data-error]::after {
     content: attr(data-error);
     color: var(--bg-col);
     font-size: var(--fs-x-small);
     float: right;
 }
+*/
 
 #btn {
     border: none;
@@ -156,3 +157,36 @@ form p a {
     color: var(--fc-anchor);
     font-weight: var(--fw-m);
 }
+
+.input-container {
+    position: relative;
+}
+
+#error-icon-email, 
+#error-icon-name,
+#error-icon-last-name,
+#error-icon-password {
+    position: absolute;
+    top: 1.07rem;
+    right: 0.5rem;
+    display: none;
+}
+
+#error-message-email, 
+#error-message-name,
+#error-message-last-name, 
+#error-message-password {
+    color: var(--bg-col);
+    float: right;
+    font-size: var(--fs-x-small);
+    font-style: italic;
+    display: none;
+}
+
+#email, 
+#name,
+#last-name,
+#password {
+    border: solid 1px var(--fc-light);
+}
+
