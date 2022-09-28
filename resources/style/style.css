@@ -23,12 +23,6 @@
     --ff: 'Poppins', sans-serif;
 }
 
-/*delete
-.text-section, .form-section {
-    border: green solid 1px;
-}
-delete*/
-
 *, *:before, *:after {
     font: inherit;
     padding: 0;
@@ -116,24 +110,6 @@ input:focus {
     -webkit-appearance: none;
     outline:none !important;
 }
-
-/*
-input:valid {
-    border: solid 1px var(--accent-col-green);
-}
-
-.input-container[data-error] input {
-    border: 1px solid var(--bg-col);
-    color: var(--bg-col);
-}
-
-.input-container[data-error]::after {
-    content: attr(data-error);
-    color: var(--bg-col);
-    font-size: var(--fs-x-small);
-    float: right;
-}
-*/
 
 #btn {
     border: none;
